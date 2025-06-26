@@ -1,0 +1,252 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"> <head><meta charset="UTF-8"><meta name="description" content="投资手册 - 专业的投资学习平台"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><title></title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="/src/styles/style.css"></head> <body> <!-- 阅读进度指示器 --> <div class="reading-progress"> <div class="reading-progress-bar" id="progressBar"></div> </div> <!-- 字体控制 --> <div class="font-controls"> <button id="decreaseFont" title="减小字体">A-</button> <button id="increaseFont" title="增大字体">A+</button> </div> <!-- 阅读模式切换 --> <div class="reading-mode"> <button id="toggleReadingMode" title="专注阅读模式">📖</button> </div> <!-- 侧边栏 --> <aside class="sidebar" id="sidebar"> <div class="sidebar-content"> <h3>📚 投资手册</h3> <nav class="sidebar-nav"> <ul> <li><a href="/">🏠 首页</a></li> <li><a href="/001_序言">📖 序言</a></li> <li><a href="/002_第一章">1️⃣ 第一章：看清自己，看懂世界</a></li> <li><a href="/003_第二章">2️⃣ 第二章：投资心理与风险管理</a></li> <li><a href="/004_第三章">3️⃣ 第三章：历史规律与高倍股研究</a></li> <li><a href="/005_第四章">4️⃣ 第四章：赛道选择与行业趋势</a></li> <li><a href="/006_第五章">5️⃣ 第五章：股票筛选策略</a></li> <li><a href="/007_第六章">6️⃣ 第六章：交易策略与执行</a></li> <li><a href="/008_第七章">7️⃣ 第七章：投资决策工具与资源</a></li> <li><a href="/009_第八章">8️⃣ 第八章：案例复盘与策略改进</a></li> <li><a href="/010_第九章">9️⃣ 第九章：构建投资体系</a></li> <li><a href="/011_第十章">🔟 第十章：交易执行与实战指南</a></li> <li><a href="/012_附录">📋 附录</a></li> <li><a href="/013_交互示例">🚀 交互功能示例</a></li> <li><a href="/014_投资小游戏">🎮 投资小游戏</a></li> </ul> </nav> </div> </aside> <!-- 侧边栏切换按钮 --> <button class="sidebar-toggle" id="sidebarToggle" title="切换侧边栏">
+☰
+</button> <!-- 主题切换按钮 --> <button class="theme-toggle" id="themeToggle" title="切换主题">
+🌙
+</button> <!-- 主内容区域 --> <main class="content-with-sidebar"> <div class="top-nav">
+  <a href="/">← 返回目录</a>
+  <a href="/006_第五章">← 上一章</a>
+  <a href="/008_第七章">下一章 →</a>
+</div>
+<h1 id="第六章技术分析与量化">第六章：技术分析与量化</h1>
+<p>技术分析与量化工具助力投资决策。</p>
+<h2 id="61-技术分析基础">6.1 技术分析基础</h2>
+<ul>
+<li>K线、均线、形态学</li>
+<li>技术指标与信号</li>
+</ul>
+<h2 id="62-量化投资入门">6.2 量化投资入门</h2>
+<ul>
+<li>策略开发与回测</li>
+<li>常用量化工具</li>
+</ul>
+<blockquote>
+<p>技术与数据，让投资更科学。</p>
+</blockquote>
+<p>| <a href="/008_%E7%AC%AC%E4%B8%83%E7%AB%A0">下一章 →</a></p>
+<script>
+  // 主题切换功能
+  const themeToggle = document.createElement('button');
+  themeToggle.className = 'theme-toggle';
+  themeToggle.id = 'themeToggle';
+  themeToggle.textContent = '🌙';
+  document.body.appendChild(themeToggle);
+  
+  const body = document.body;
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    body.setAttribute('data-theme', savedTheme);
+    themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+  }
+  
+  themeToggle.addEventListener('click', () => {
+    const currentTheme = body.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    body.setAttribute('data-theme', newTheme);
+    themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+    localStorage.setItem('theme', newTheme);
+  });
+  
+  // 侧边栏功能
+  const sidebarToggle = document.createElement('button');
+  sidebarToggle.className = 'sidebar-toggle';
+  sidebarToggle.id = 'sidebarToggle';
+  sidebarToggle.textContent = '📚';
+  document.body.appendChild(sidebarToggle);
+  
+  const sidebar = document.createElement('div');
+  sidebar.className = 'sidebar';
+  sidebar.id = 'sidebar';
+  sidebar.innerHTML = `
+    <div class="sidebar-content">
+      <h3>快速导航</h3>
+      <ul class="sidebar-nav">
+        <li><a href="/">首页</a></li>
+        <li><a href="/001_序言">序言</a></li>
+        <li><a href="/002_第一章">第一章：投资认知起点</a></li>
+        <li><a href="/003_第二章">第二章：投资心理与风险管理</a></li>
+        <li><a href="/004_第三章">第三章：历史规律与高倍股研究</a></li>
+        <li><a href="/005_第四章">第四章：赛道选择与行业趋势</a></li>
+        <li><a href="/006_第五章">第五章：基本面分析</a></li>
+        <li><a href="/007_第六章" class="active">第六章：技术分析与量化</a></li>
+        <li><a href="/008_第七章">第七章：资产配置与组合管理</a></li>
+        <li><a href="/009_第八章">第八章：投资工具与平台</a></li>
+        <li><a href="/010_第九章">第九章：全球视野与宏观趋势</a></li>
+        <li><a href="/011_第十章">第十章：实战案例与复盘</a></li>
+        <li><a href="/012_附录">附录</a></li>
+      </ul>
+    </div>
+  `;
+  document.body.appendChild(sidebar);
+  
+  sidebarToggle.addEventListener('click', () => {
+    sidebar.classList.toggle('open');
+  });
+  
+  document.addEventListener('click', (e) => {
+    if (!sidebar.contains(e.target) && !sidebarToggle.contains(e.target)) {
+      sidebar.classList.remove('open');
+    }
+  });
+  
+  const sidebarLinks = document.querySelectorAll('.sidebar-nav a');
+  sidebarLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      sidebar.classList.remove('open');
+    });
+  });
+</script>
+<script>
+  // 主题切换功能
+  const themeToggle = document.createElement('button');
+  themeToggle.className = 'theme-toggle';
+  themeToggle.id = 'themeToggle';
+  themeToggle.textContent = '🌙';
+  document.body.appendChild(themeToggle);
+  
+  const body = document.body;
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    body.setAttribute('data-theme', savedTheme);
+    themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+  }
+  
+  themeToggle.addEventListener('click', () => {
+    const currentTheme = body.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    body.setAttribute('data-theme', newTheme);
+    themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+    localStorage.setItem('theme', newTheme);
+  });
+  
+  // 侧边栏功能
+  const sidebarToggle = document.createElement('button');
+  sidebarToggle.className = 'sidebar-toggle';
+  sidebarToggle.id = 'sidebarToggle';
+  sidebarToggle.textContent = '📚';
+  document.body.appendChild(sidebarToggle);
+  
+  const sidebar = document.createElement('div');
+  sidebar.className = 'sidebar';
+  sidebar.id = 'sidebar';
+  sidebar.innerHTML = `
+    <div class="sidebar-content">
+      <h3>快速导航</h3>
+      <ul class="sidebar-nav">
+        <li><a href="/">首页</a></li>
+        <li><a href="/001_序言">序言</a></li>
+        <li><a href="/002_第一章">第一章：投资认知起点</a></li>
+        <li><a href="/003_第二章">第二章：投资心理与风险管理</a></li>
+        <li><a href="/004_第三章">第三章：历史规律与高倍股研究</a></li>
+        <li><a href="/005_第四章">第四章：赛道选择与行业趋势</a></li>
+        <li><a href="/006_第五章">第五章：基本面分析</a></li>
+        <li><a href="/007_第六章" class="active">第六章：技术分析与量化</a></li>
+        <li><a href="/008_第七章">第七章：资产配置与组合管理</a></li>
+        <li><a href="/009_第八章">第八章：投资工具与平台</a></li>
+        <li><a href="/010_第九章">第九章：全球视野与宏观趋势</a></li>
+        <li><a href="/011_第十章">第十章：实战案例与复盘</a></li>
+        <li><a href="/012_附录">附录</a></li>
+      </ul>
+    </div>
+  `;
+  document.body.appendChild(sidebar);
+  
+  sidebarToggle.addEventListener('click', () => {
+    sidebar.classList.toggle('open');
+  });
+  
+  document.addEventListener('click', (e) => {
+    if (!sidebar.contains(e.target) && !sidebarToggle.contains(e.target)) {
+      sidebar.classList.remove('open');
+    }
+  });
+  
+  const sidebarLinks = document.querySelectorAll('.sidebar-nav a');
+  sidebarLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      sidebar.classList.remove('open');
+    });
+  });
+</script>
+<div class="nav-links">
+  <a href="/">← 返回目录</a>
+  <a href="/006_第五章">← 上一章</a>
+  <a href="/008_第七章">下一章 →</a>
+</div>
+<script>
+  // 主题切换功能
+  const themeToggle = document.createElement('button');
+  themeToggle.className = 'theme-toggle';
+  themeToggle.id = 'themeToggle';
+  themeToggle.textContent = '🌙';
+  document.body.appendChild(themeToggle);
+  
+  const body = document.body;
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    body.setAttribute('data-theme', savedTheme);
+    themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+  }
+  
+  themeToggle.addEventListener('click', () => {
+    const currentTheme = body.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    body.setAttribute('data-theme', newTheme);
+    themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+    localStorage.setItem('theme', newTheme);
+  });
+  
+  // 侧边栏功能
+  const sidebarToggle = document.createElement('button');
+  sidebarToggle.className = 'sidebar-toggle';
+  sidebarToggle.id = 'sidebarToggle';
+  sidebarToggle.textContent = '📚';
+  document.body.appendChild(sidebarToggle);
+  
+  const sidebar = document.createElement('div');
+  sidebar.className = 'sidebar';
+  sidebar.id = 'sidebar';
+  sidebar.innerHTML = `
+    <div class="sidebar-content">
+      <h3>快速导航</h3>
+      <ul class="sidebar-nav">
+        <li><a href="/">首页</a></li>
+        <li><a href="/001_序言">序言</a></li>
+        <li><a href="/002_第一章">第一章：投资认知起点</a></li>
+        <li><a href="/003_第二章">第二章：投资心理与风险管理</a></li>
+        <li><a href="/004_第三章">第三章：历史规律与高倍股研究</a></li>
+        <li><a href="/005_第四章">第四章：赛道选择与行业趋势</a></li>
+        <li><a href="/006_第五章">第五章：基本面分析</a></li>
+        <li><a href="/007_第六章" class="active">第六章：技术分析与量化</a></li>
+        <li><a href="/008_第七章">第七章：资产配置与组合管理</a></li>
+        <li><a href="/009_第八章">第八章：投资工具与平台</a></li>
+        <li><a href="/010_第九章">第九章：全球视野与宏观趋势</a></li>
+        <li><a href="/011_第十章">第十章：实战案例与复盘</a></li>
+        <li><a href="/012_附录">附录</a></li>
+      </ul>
+    </div>
+  `;
+  document.body.appendChild(sidebar);
+  
+  sidebarToggle.addEventListener('click', () => {
+    sidebar.classList.toggle('open');
+  });
+  
+  document.addEventListener('click', (e) => {
+    if (!sidebar.contains(e.target) && !sidebarToggle.contains(e.target)) {
+      sidebar.classList.remove('open');
+    }
+  });
+  
+  const sidebarLinks = document.querySelectorAll('.sidebar-nav a');
+  sidebarLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      sidebar.classList.remove('open');
+    });
+  });
+</script> </main> <script type="module">const s=document.getElementById("themeToggle"),d=document.documentElement,m=localStorage.getItem("theme")||"light";d.setAttribute("data-theme",m);g(m);s?.addEventListener("click",()=>{const o=d.getAttribute("data-theme")==="light"?"dark":"light";d.setAttribute("data-theme",o),localStorage.setItem("theme",o),g(o)});function g(t){s&&(s.textContent=t==="light"?"🌙":"☀️")}const u=document.getElementById("sidebarToggle"),h=document.getElementById("sidebar"),k=document.querySelector(".content-with-sidebar");u?.addEventListener("click",()=>{h?.classList.toggle("open"),k?.classList.toggle("sidebar-open")});const f=document.getElementById("decreaseFont"),y=document.getElementById("increaseFont"),i=document.body;let n=parseInt(localStorage.getItem("fontSize"))||16;i.style.fontSize=n+"px";f?.addEventListener("click",()=>{n>12&&(n-=2,i.style.fontSize=n+"px",localStorage.setItem("fontSize",n))});y?.addEventListener("click",()=>{n<24&&(n+=2,i.style.fontSize=n+"px",localStorage.setItem("fontSize",n))});const c=document.getElementById("toggleReadingMode");c?.addEventListener("click",()=>{document.body.classList.toggle("focus-mode");const t=document.body.classList.contains("focus-mode");c.textContent=t?"📚":"📖",c.title=t?"退出专注模式":"专注阅读模式"});const r=document.getElementById("progressBar");window.addEventListener("scroll",()=>{const t=window.pageYOffset,o=document.body.offsetHeight-window.innerHeight,e=t/o*100;r&&(r.style.width=e+"%")});function L(){document.querySelectorAll("h1, h2, h3").forEach(o=>{const e=document.createElement("button");e.className="bookmark",e.innerHTML="🔖",e.title="添加书签",localStorage.getItem(`bookmark-${o.textContent}`)&&(e.classList.add("active"),e.innerHTML="📌",e.title="移除书签"),e.addEventListener("click",()=>{const l=`bookmark-${o.textContent}`;e.classList.contains("active")?(e.classList.remove("active"),e.innerHTML="🔖",e.title="添加书签",localStorage.removeItem(l)):(e.classList.add("active"),e.innerHTML="📌",e.title="移除书签",localStorage.setItem(l,"true"))}),o.style.position="relative",o.appendChild(e)})}function p(){document.querySelectorAll("pre").forEach(o=>{const e=document.createElement("div");e.className="code-header",e.innerHTML=`
+            <span>代码示例</span>
+            <button onclick="copyCode(this)">复制</button>
+          `,o.insertBefore(e,o.firstChild)})}window.copyCode=function(t){const e=t.closest("pre").querySelector("code");e&&navigator.clipboard.writeText(e.textContent).then(()=>{const a=t.textContent;t.textContent="已复制!",t.style.background="#45a049",setTimeout(()=>{t.textContent=a,t.style.background="#4CAF50"},2e3)})};document.addEventListener("DOMContentLoaded",()=>{L(),p()});</script> </body> </html>

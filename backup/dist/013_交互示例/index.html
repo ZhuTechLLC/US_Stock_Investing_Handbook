@@ -1,0 +1,249 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"> <head><meta charset="UTF-8"><meta name="description" content="投资手册 - 专业的投资学习平台"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><title></title><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet"><link rel="stylesheet" href="/src/styles/style.css"></head> <body> <!-- 阅读进度指示器 --> <div class="reading-progress"> <div class="reading-progress-bar" id="progressBar"></div> </div> <!-- 字体控制 --> <div class="font-controls"> <button id="decreaseFont" title="减小字体">A-</button> <button id="increaseFont" title="增大字体">A+</button> </div> <!-- 阅读模式切换 --> <div class="reading-mode"> <button id="toggleReadingMode" title="专注阅读模式">📖</button> </div> <!-- 侧边栏 --> <aside class="sidebar" id="sidebar"> <div class="sidebar-content"> <h3>📚 投资手册</h3> <nav class="sidebar-nav"> <ul> <li><a href="/">🏠 首页</a></li> <li><a href="/001_序言">📖 序言</a></li> <li><a href="/002_第一章">1️⃣ 第一章：看清自己，看懂世界</a></li> <li><a href="/003_第二章">2️⃣ 第二章：投资心理与风险管理</a></li> <li><a href="/004_第三章">3️⃣ 第三章：历史规律与高倍股研究</a></li> <li><a href="/005_第四章">4️⃣ 第四章：赛道选择与行业趋势</a></li> <li><a href="/006_第五章">5️⃣ 第五章：股票筛选策略</a></li> <li><a href="/007_第六章">6️⃣ 第六章：交易策略与执行</a></li> <li><a href="/008_第七章">7️⃣ 第七章：投资决策工具与资源</a></li> <li><a href="/009_第八章">8️⃣ 第八章：案例复盘与策略改进</a></li> <li><a href="/010_第九章">9️⃣ 第九章：构建投资体系</a></li> <li><a href="/011_第十章">🔟 第十章：交易执行与实战指南</a></li> <li><a href="/012_附录">📋 附录</a></li> <li><a href="/013_交互示例">🚀 交互功能示例</a></li> <li><a href="/014_投资小游戏">🎮 投资小游戏</a></li> </ul> </nav> </div> </aside> <!-- 侧边栏切换按钮 --> <button class="sidebar-toggle" id="sidebarToggle" title="切换侧边栏">
+☰
+</button> <!-- 主题切换按钮 --> <button class="theme-toggle" id="themeToggle" title="切换主题">
+🌙
+</button> <!-- 主内容区域 --> <main class="content-with-sidebar"> <h1 id="交互功能示例">交互功能示例</h1>
+<p>这个页面展示了投资手册的各种交互功能，让你体验现代化的阅读体验。</p>
+<h2 id="阅读控制功能">阅读控制功能</h2>
+<h3 id="字体大小调节">字体大小调节</h3>
+<p>你可以使用右上角的 A- 和 A+ 按钮来调节字体大小，设置会自动保存。</p>
+<h3 id="专注阅读模式">专注阅读模式</h3>
+<p>点击右上角的 📖 按钮进入专注阅读模式，隐藏侧边栏，提供更专注的阅读体验。</p>
+<h3 id="阅读进度">阅读进度</h3>
+<p>页面顶部有阅读进度条，实时显示你的阅读进度。</p>
+<h2 id="书签功能">书签功能</h2>
+<h3 id="添加书签">添加书签</h3>
+<p>每个标题旁边都有一个 🔖 按钮，点击可以添加书签。已添加的书签会显示为 📌。</p>
+<h2 id="代码示例增强">代码示例增强</h2>
+<h3 id="python-代码示例">Python 代码示例</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> pandas </span><span style="color:#F97583">as</span><span style="color:#E1E4E8"> pd</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> numpy </span><span style="color:#F97583">as</span><span style="color:#E1E4E8"> np</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 计算移动平均线</span></span>
+<span class="line"><span style="color:#F97583">def</span><span style="color:#B392F0"> calculate_ma</span><span style="color:#E1E4E8">(prices, window</span><span style="color:#F97583">=</span><span style="color:#79B8FF">20</span><span style="color:#E1E4E8">):</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> prices.rolling(</span><span style="color:#FFAB70">window</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">window).mean()</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 示例数据</span></span>
+<span class="line"><span style="color:#E1E4E8">data </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> pd.DataFrame({</span></span>
+<span class="line"><span style="color:#9ECBFF">    'close'</span><span style="color:#E1E4E8">: np.random.randn(</span><span style="color:#79B8FF">100</span><span style="color:#E1E4E8">).cumsum() </span><span style="color:#F97583">+</span><span style="color:#79B8FF"> 100</span></span>
+<span class="line"><span style="color:#E1E4E8">})</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 计算20日均线</span></span>
+<span class="line"><span style="color:#E1E4E8">data[</span><span style="color:#9ECBFF">'ma20'</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> calculate_ma(data[</span><span style="color:#9ECBFF">'close'</span><span style="color:#E1E4E8">], </span><span style="color:#79B8FF">20</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#79B8FF">print</span><span style="color:#E1E4E8">(data.tail())</span></span></code></pre>
+<h3 id="javascript-代码示例">JavaScript 代码示例</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#6A737D">// 计算投资组合收益率</span></span>
+<span class="line"><span style="color:#F97583">function</span><span style="color:#B392F0"> calculatePortfolioReturn</span><span style="color:#E1E4E8">(</span><span style="color:#FFAB70">weights</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">returns</span><span style="color:#E1E4E8">) {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> weights.</span><span style="color:#B392F0">reduce</span><span style="color:#E1E4E8">((</span><span style="color:#FFAB70">sum</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">weight</span><span style="color:#E1E4E8">, </span><span style="color:#FFAB70">i</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">=></span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">        return</span><span style="color:#E1E4E8"> sum </span><span style="color:#F97583">+</span><span style="color:#E1E4E8"> weight </span><span style="color:#F97583">*</span><span style="color:#E1E4E8"> returns[i];</span></span>
+<span class="line"><span style="color:#E1E4E8">    }, </span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 示例使用</span></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> weights</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> [</span><span style="color:#79B8FF">0.4</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">0.3</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">0.3</span><span style="color:#E1E4E8">];</span></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> returns</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> [</span><span style="color:#79B8FF">0.08</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">0.12</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">0.06</span><span style="color:#E1E4E8">];</span></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> portfolioReturn</span><span style="color:#F97583"> =</span><span style="color:#B392F0"> calculatePortfolioReturn</span><span style="color:#E1E4E8">(weights, returns);</span></span>
+<span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">`投资组合收益率: ${</span><span style="color:#9ECBFF">(</span><span style="color:#E1E4E8">portfolioReturn</span><span style="color:#F97583"> *</span><span style="color:#79B8FF"> 100</span><span style="color:#9ECBFF">).</span><span style="color:#B392F0">toFixed</span><span style="color:#9ECBFF">(</span><span style="color:#79B8FF">2</span><span style="color:#9ECBFF">)</span><span style="color:#9ECBFF">}%`</span><span style="color:#E1E4E8">);</span></span></code></pre>
+<h2 id="交互式计算器">交互式计算器</h2>
+<h3 id="复利计算器">复利计算器</h3>
+<div class="calculator">
+    <h3>复利计算器</h3>
+    <input type="number" id="principal" placeholder="本金" step="1000">
+    <input type="number" id="rate" placeholder="年化收益率 (%)" step="0.1">
+    <input type="number" id="years" placeholder="投资年限" step="1">
+    <button onclick="calculateCompoundInterest()">计算</button>
+    <div id="compoundResult" class="calculator-result" style="display: none;"></div>
+</div>
+<h3 id="风险收益计算器">风险收益计算器</h3>
+<div class="calculator">
+    <h3>风险收益计算器</h3>
+    <input type="number" id="expectedReturn" placeholder="预期收益率 (%)" step="0.1">
+    <input type="number" id="volatility" placeholder="波动率 (%)" step="0.1">
+    <input type="number" id="confidence" placeholder="置信水平 (%)" value="95" step="1">
+    <button onclick="calculateRiskReturn()">计算</button>
+    <div id="riskResult" class="calculator-result" style="display: none;"></div>
+</div>
+<h2 id="交互式图表">交互式图表</h2>
+<h3 id="投资组合收益曲线">投资组合收益曲线</h3>
+<div class="chart-container">
+    <div class="chart-controls">
+        <button onclick="updateChart(&#x27;1y&#x27;)">1年</button>
+        <button onclick="updateChart(&#x27;3y&#x27;)">3年</button>
+        <button onclick="updateChart(&#x27;5y&#x27;)">5年</button>
+        <button onclick="updateChart(&#x27;10y&#x27;)">10年</button>
+    </div>
+    <canvas id="portfolioChart" width="600" height="300"></canvas>
+</div>
+<h2 id="学习路径建议">学习路径建议</h2>
+<h3 id="初学者路径">初学者路径</h3>
+<ol>
+<li><strong>第一章：看清自己，看懂世界</strong> - 建立投资认知基础</li>
+<li><strong>第二章：投资心理与风险管理</strong> - 学习风险控制</li>
+<li><strong>第五章：股票筛选策略</strong> - 掌握选股方法</li>
+<li><strong>第六章：交易策略与执行</strong> - 学习交易技巧</li>
+</ol>
+<h3 id="进阶路径">进阶路径</h3>
+<ol>
+<li><strong>第三章：历史规律与高倍股研究</strong> - 深入研究</li>
+<li><strong>第四章：赛道选择与行业趋势</strong> - 行业分析</li>
+<li><strong>第七章：投资决策工具与资源</strong> - 工具使用</li>
+<li><strong>第八章：案例复盘与策略改进</strong> - 实战总结</li>
+</ol>
+<h2 id="笔记功能">笔记功能</h2>
+<h3 id="个人笔记">个人笔记</h3>
+<div class="calculator">
+    <h3>添加笔记</h3>
+    <textarea id="noteText" placeholder="在这里添加你的笔记..." rows="4" style="width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 5px; background: var(--bg-color); color: var(--text-primary);"></textarea>
+    <button onclick="saveNote()">保存笔记</button>
+    <div id="savedNotes"></div>
+</div>
+<script>
+// 复利计算器
+function calculateCompoundInterest() {
+    const principal = parseFloat(document.getElementById('principal').value);
+    const rate = parseFloat(document.getElementById('rate').value) / 100;
+    const years = parseFloat(document.getElementById('years').value);
+    
+    if (principal && rate && years) {
+        const amount = principal * Math.pow(1 + rate, years);
+        const interest = amount - principal;
+        
+        const result = document.getElementById('compoundResult');
+        result.innerHTML = `
+            <strong>计算结果：</strong><br>
+            本金：¥${principal.toLocaleString()}<br>
+            最终金额：¥${amount.toLocaleString(undefined, {maximumFractionDigits: 2})}<br>
+            总收益：¥${interest.toLocaleString(undefined, {maximumFractionDigits: 2})}<br>
+            年化收益率：${(rate * 100).toFixed(2)}%
+        `;
+        result.style.display = 'block';
+    }
+}
+
+// 风险收益计算器
+function calculateRiskReturn() {
+    const expectedReturn = parseFloat(document.getElementById('expectedReturn').value) / 100;
+    const volatility = parseFloat(document.getElementById('volatility').value) / 100;
+    const confidence = parseFloat(document.getElementById('confidence').value) / 100;
+    
+    if (expectedReturn && volatility && confidence) {
+        // 简化的VaR计算
+        const zScore = 1.96; // 95%置信水平对应的Z值
+        const var95 = expectedReturn - zScore * volatility;
+        
+        const result = document.getElementById('riskResult');
+        result.innerHTML = `
+            <strong>风险分析结果：</strong><br>
+            预期收益率：${(expectedReturn * 100).toFixed(2)}%<br>
+            年化波动率：${(volatility * 100).toFixed(2)}%<br>
+            95%置信水平下的最大损失：${(Math.abs(var95) * 100).toFixed(2)}%<br>
+            夏普比率：${(expectedReturn / volatility).toFixed(2)}
+        `;
+        result.style.display = 'block';
+    }
+}
+
+// 图表更新
+function updateChart(period) {
+    const canvas = document.getElementById('portfolioChart');
+    const ctx = canvas.getContext('2d');
+    
+    // 清除画布
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+    // 模拟数据
+    const data = generateMockData(period);
+    
+    // 绘制简单的线图
+    ctx.strokeStyle = '#4CAF50';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    
+    data.forEach((point, index) => {
+        const x = (index / (data.length - 1)) * canvas.width;
+        const y = canvas.height - (point / Math.max(...data)) * canvas.height;
+        
+        if (index === 0) {
+            ctx.moveTo(x, y);
+        } else {
+            ctx.lineTo(x, y);
+        }
+    });
+    
+    ctx.stroke();
+    
+    // 添加标签
+    ctx.fillStyle = '#333';
+    ctx.font = '12px Arial';
+    ctx.fillText(`${period} 投资组合收益曲线`, 10, 20);
+}
+
+function generateMockData(period) {
+    const points = period === '1y' ? 12 : period === '3y' ? 36 : period === '5y' ? 60 : 120;
+    const data = [];
+    let value = 100;
+    
+    for (let i = 0; i < points; i++) {
+        value *= (1 + (Math.random() - 0.5) * 0.1);
+        data.push(value);
+    }
+    
+    return data;
+}
+
+// 笔记功能
+function saveNote() {
+    const noteText = document.getElementById('noteText').value;
+    if (noteText.trim()) {
+        const notes = JSON.parse(localStorage.getItem('notes') || '[]');
+        const newNote = {
+            id: Date.now(),
+            text: noteText,
+            date: new Date().toLocaleString(),
+            page: window.location.pathname
+        };
+        notes.push(newNote);
+        localStorage.setItem('notes', JSON.stringify(notes));
+        
+        document.getElementById('noteText').value = '';
+        displayNotes();
+    }
+}
+
+function displayNotes() {
+    const notes = JSON.parse(localStorage.getItem('notes') || '[]');
+    const currentPageNotes = notes.filter(note => note.page === window.location.pathname);
+    
+    const notesContainer = document.getElementById('savedNotes');
+    if (currentPageNotes.length > 0) {
+        notesContainer.innerHTML = '<h4>已保存的笔记：</h4>';
+        currentPageNotes.forEach(note => {
+            notesContainer.innerHTML += `
+                <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 5px; padding: 10px; margin: 10px 0;">
+                    <small>${note.date}</small>
+                    <p>${note.text}</p>
+                    <button onclick="deleteNote(${note.id})" style="background: #ff6b6b; color: white; border: none; border-radius: 3px; padding: 2px 8px; cursor: pointer;">删除</button>
+                </div>
+            `;
+        });
+    } else {
+        notesContainer.innerHTML = '<p>暂无笔记</p>';
+    }
+}
+
+function deleteNote(id) {
+    const notes = JSON.parse(localStorage.getItem('notes') || '[]');
+    const filteredNotes = notes.filter(note => note.id !== id);
+    localStorage.setItem('notes', JSON.stringify(filteredNotes));
+    displayNotes();
+}
+
+// 页面加载时初始化
+document.addEventListener('DOMContentLoaded', () => {
+    displayNotes();
+    updateChart('1y');
+});
+</script>  </main> <script type="module">const s=document.getElementById("themeToggle"),d=document.documentElement,m=localStorage.getItem("theme")||"light";d.setAttribute("data-theme",m);g(m);s?.addEventListener("click",()=>{const o=d.getAttribute("data-theme")==="light"?"dark":"light";d.setAttribute("data-theme",o),localStorage.setItem("theme",o),g(o)});function g(t){s&&(s.textContent=t==="light"?"🌙":"☀️")}const u=document.getElementById("sidebarToggle"),h=document.getElementById("sidebar"),k=document.querySelector(".content-with-sidebar");u?.addEventListener("click",()=>{h?.classList.toggle("open"),k?.classList.toggle("sidebar-open")});const f=document.getElementById("decreaseFont"),y=document.getElementById("increaseFont"),i=document.body;let n=parseInt(localStorage.getItem("fontSize"))||16;i.style.fontSize=n+"px";f?.addEventListener("click",()=>{n>12&&(n-=2,i.style.fontSize=n+"px",localStorage.setItem("fontSize",n))});y?.addEventListener("click",()=>{n<24&&(n+=2,i.style.fontSize=n+"px",localStorage.setItem("fontSize",n))});const c=document.getElementById("toggleReadingMode");c?.addEventListener("click",()=>{document.body.classList.toggle("focus-mode");const t=document.body.classList.contains("focus-mode");c.textContent=t?"📚":"📖",c.title=t?"退出专注模式":"专注阅读模式"});const r=document.getElementById("progressBar");window.addEventListener("scroll",()=>{const t=window.pageYOffset,o=document.body.offsetHeight-window.innerHeight,e=t/o*100;r&&(r.style.width=e+"%")});function L(){document.querySelectorAll("h1, h2, h3").forEach(o=>{const e=document.createElement("button");e.className="bookmark",e.innerHTML="🔖",e.title="添加书签",localStorage.getItem(`bookmark-${o.textContent}`)&&(e.classList.add("active"),e.innerHTML="📌",e.title="移除书签"),e.addEventListener("click",()=>{const l=`bookmark-${o.textContent}`;e.classList.contains("active")?(e.classList.remove("active"),e.innerHTML="🔖",e.title="添加书签",localStorage.removeItem(l)):(e.classList.add("active"),e.innerHTML="📌",e.title="移除书签",localStorage.setItem(l,"true"))}),o.style.position="relative",o.appendChild(e)})}function p(){document.querySelectorAll("pre").forEach(o=>{const e=document.createElement("div");e.className="code-header",e.innerHTML=`
+            <span>代码示例</span>
+            <button onclick="copyCode(this)">复制</button>
+          `,o.insertBefore(e,o.firstChild)})}window.copyCode=function(t){const e=t.closest("pre").querySelector("code");e&&navigator.clipboard.writeText(e.textContent).then(()=>{const a=t.textContent;t.textContent="已复制!",t.style.background="#45a049",setTimeout(()=>{t.textContent=a,t.style.background="#4CAF50"},2e3)})};document.addEventListener("DOMContentLoaded",()=>{L(),p()});</script> </body> </html>
