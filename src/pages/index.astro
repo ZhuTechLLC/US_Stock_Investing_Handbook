@@ -2,9 +2,10 @@
 import Layout from '../layouts/Layout.astro';
 
 const title = "美股投资实操手册I - 高倍股分析与策略实践";
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
-<Layout title={title}>
+<Layout title={title} lang="zh" alt="/en/">
   <div class="hero">
     <div class="hero-content">
       <h1>📈 美股投资实操手册I</h1>
@@ -64,7 +65,7 @@ const title = "美股投资实操手册I - 高倍股分析与策略实践";
           <h3>序言</h3>
         </div>
         <p>投资是认知升级、长期坚守与系统执行的自然结果</p>
-        <a href="/000_序言" class="chapter-link">开始阅读 →</a>
+        <a href={`${baseUrl}000_序言`} class="chapter-link">开始阅读 →</a>
       </div>
 
       <div class="chapter-card">
@@ -73,7 +74,7 @@ const title = "美股投资实操手册I - 高倍股分析与策略实践";
           <h3>第一章：投资认知起点</h3>
         </div>
         <p>看清自己，看懂世界——投资的认知起点</p>
-        <a href="/001_第一章：看清自己，看懂世界——投资的认知起点" class="chapter-link">开始阅读 →</a>
+        <a href={`${baseUrl}001_第一章：看清自己，看懂世界——投资的认知起点`} class="chapter-link">开始阅读 →</a>
       </div>
 
       <div class="chapter-card">
@@ -82,7 +83,7 @@ const title = "美股投资实操手册I - 高倍股分析与策略实践";
           <h3>第二章：投资心理与风险管理</h3>
         </div>
         <p>投资心理管理是成功投资的核心要素</p>
-        <a href="/002_第二章：投资心理与风险管理" class="chapter-link">开始阅读 →</a>
+        <a href={`${baseUrl}002_第二章：投资心理与风险管理`} class="chapter-link">开始阅读 →</a>
       </div>
 
       <div class="chapter-card">
@@ -91,7 +92,7 @@ const title = "美股投资实操手册I - 高倍股分析与策略实践";
           <h3>第三章：历史规律与高倍股研究</h3>
         </div>
         <p>历史不会简单重复，但总有相似的韵律</p>
-        <a href="/003_第三章：历史规律与高倍股研究" class="chapter-link">开始阅读 →</a>
+        <a href={`${baseUrl}003_第三章：历史规律与高倍股研究`} class="chapter-link">开始阅读 →</a>
       </div>
 
       <div class="chapter-card">
@@ -100,7 +101,7 @@ const title = "美股投资实操手册I - 高倍股分析与策略实践";
           <h3>第四章：赛道选择与行业趋势</h3>
         </div>
         <p>选择对的赛道，顺势而为</p>
-        <a href="/004_第四章：赛道选择与行业趋势" class="chapter-link">开始阅读 →</a>
+        <a href={`${baseUrl}004_第四章：赛道选择与行业趋势`} class="chapter-link">开始阅读 →</a>
       </div>
 
       <div class="chapter-card">
@@ -109,7 +110,7 @@ const title = "美股投资实操手册I - 高倍股分析与策略实践";
           <h3>第五章：股票筛选策略</h3>
         </div>
         <p>基本面是投资的基石</p>
-        <a href="/005_第五章：股票筛选策略" class="chapter-link">开始阅读 →</a>
+        <a href={`${baseUrl}005_第五章：股票筛选策略`} class="chapter-link">开始阅读 →</a>
       </div>
 
       <div class="chapter-card">
@@ -118,7 +119,7 @@ const title = "美股投资实操手册I - 高倍股分析与策略实践";
           <h3>第六章：交易策略与执行</h3>
         </div>
         <p>技术分析与量化工具的应用</p>
-        <a href="/006_第六章：交易策略与执行" class="chapter-link">开始阅读 →</a>
+        <a href={`${baseUrl}006_第六章：交易策略与执行`} class="chapter-link">开始阅读 →</a>
       </div>
 
       <div class="chapter-card">
@@ -127,7 +128,7 @@ const title = "美股投资实操手册I - 高倍股分析与策略实践";
           <h3>第七章：投资决策工具与资源</h3>
         </div>
         <p>投资决策工具与资源整合</p>
-        <a href="/007_第七章：投资决策工具与资源" class="chapter-link">开始阅读 →</a>
+        <a href={`${baseUrl}007_第七章：投资决策工具与资源`} class="chapter-link">开始阅读 →</a>
       </div>
 
       <div class="chapter-card">
@@ -136,7 +137,7 @@ const title = "美股投资实操手册I - 高倍股分析与策略实践";
           <h3>第八章：案例复盘与策略改进</h3>
         </div>
         <p>案例复盘与策略改进</p>
-        <a href="/008_第八章：案例复盘与策略改进" class="chapter-link">开始阅读 →</a>
+        <a href={`${baseUrl}008_第八章：案例复盘与策略改进`} class="chapter-link">开始阅读 →</a>
       </div>
 
       <div class="chapter-card">
@@ -145,7 +146,7 @@ const title = "美股投资实操手册I - 高倍股分析与策略实践";
           <h3>第九章：构建投资体系</h3>
         </div>
         <p>构建完整的投资体系</p>
-        <a href="/009_第九章：构建投资体系" class="chapter-link">开始阅读 →</a>
+        <a href={`${baseUrl}009_第九章：构建投资体系`} class="chapter-link">开始阅读 →</a>
       </div>
 
       <div class="chapter-card">
@@ -154,7 +155,7 @@ const title = "美股投资实操手册I - 高倍股分析与策略实践";
           <h3>第十章：交易执行与实战指南</h3>
         </div>
         <p>交易执行与实战指南</p>
-        <a href="/010_第十章：交易执行与实战指南" class="chapter-link">开始阅读 →</a>
+        <a href={`${baseUrl}010_第十章：交易执行与实战指南`} class="chapter-link">开始阅读 →</a>
       </div>
 
       <div class="chapter-card">
@@ -163,7 +164,7 @@ const title = "美股投资实操手册I - 高倍股分析与策略实践";
           <h3>附录</h3>
         </div>
         <p>投资相关的参考资料和工具</p>
-        <a href="/011_附录" class="chapter-link">开始阅读 →</a>
+        <a href={`${baseUrl}011_附录`} class="chapter-link">开始阅读 →</a>
       </div>
 
       <div class="chapter-card">
@@ -172,7 +173,7 @@ const title = "美股投资实操手册I - 高倍股分析与策略实践";
           <h3>策略逻辑</h3>
         </div>
         <p>深入理解投资策略的核心逻辑</p>
-        <a href="/012_策略逻辑" class="chapter-link">开始阅读 →</a>
+        <a href={`${baseUrl}012_策略逻辑`} class="chapter-link">开始阅读 →</a>
       </div>
 
       <div class="chapter-card">
@@ -181,7 +182,7 @@ const title = "美股投资实操手册I - 高倍股分析与策略实践";
           <h3>示例：加载股票价格数据</h3>
         </div>
         <p>实战代码示例：如何获取和处理股票数据</p>
-        <a href="/013_示例：加载股票价格数据" class="chapter-link">开始阅读 →</a>
+        <a href={`${baseUrl}013_示例：加载股票价格数据`} class="chapter-link">开始阅读 →</a>
       </div>
 
       <div class="chapter-card">
@@ -190,7 +191,7 @@ const title = "美股投资实操手册I - 高倍股分析与策略实践";
           <h3>示例：计算动量因子</h3>
         </div>
         <p>实战代码示例：动量因子的计算与应用</p>
-        <a href="/014_示例：计算动量因子" class="chapter-link">开始阅读 →</a>
+        <a href={`${baseUrl}014_示例：计算动量因子`} class="chapter-link">开始阅读 →</a>
       </div>
 
       <div class="chapter-card">
@@ -199,7 +200,7 @@ const title = "美股投资实操手册I - 高倍股分析与策略实践";
           <h3>示例：等权构建组合</h3>
         </div>
         <p>实战代码示例：等权重投资组合的构建</p>
-        <a href="/015_示例：等权构建组合" class="chapter-link">开始阅读 →</a>
+        <a href={`${baseUrl}015_示例：等权构建组合`} class="chapter-link">开始阅读 →</a>
       </div>
 
       <div class="chapter-card">
@@ -208,7 +209,7 @@ const title = "美股投资实操手册I - 高倍股分析与策略实践";
           <h3>示例：回测收益曲线</h3>
         </div>
         <p>实战代码示例：策略回测与收益分析</p>
-        <a href="/016_示例：回测收益曲线" class="chapter-link">开始阅读 →</a>
+        <a href={`${baseUrl}016_示例：回测收益曲线`} class="chapter-link">开始阅读 →</a>
       </div>
 
       <div class="chapter-card">
@@ -217,7 +218,7 @@ const title = "美股投资实操手册I - 高倍股分析与策略实践";
           <h3>使用 scipy.optimize 进行优化</h3>
         </div>
         <p>高级优化技术在投资策略中的应用</p>
-        <a href="/017_使用 scipy.optimize 进行优化" class="chapter-link">开始阅读 →</a>
+        <a href={`${baseUrl}017_使用 scipy.optimize 进行优化`} class="chapter-link">开始阅读 →</a>
       </div>
     </div>
   </div>
@@ -226,8 +227,8 @@ const title = "美股投资实操手册I - 高倍股分析与策略实践";
     <h2>🚀 开始你的美股投资之旅</h2>
     <p>选择适合你的学习路径，构建属于自己的美股投资体系</p>
     <div class="cta-buttons">
-      <a href="/000_序言" class="cta-button primary">从序言开始</a>
-      <a href="/001_第一章：看清自己，看懂世界——投资的认知起点" class="cta-button secondary">直接进入第一章</a>
+      <a href={`${baseUrl}000_序言`} class="cta-button primary">从序言开始</a>
+      <a href={`${baseUrl}001_第一章：看清自己，看懂世界——投资的认知起点`} class="cta-button secondary">直接进入第一章</a>
     </div>
   </div>
 

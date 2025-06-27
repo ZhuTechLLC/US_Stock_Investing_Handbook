@@ -4,5 +4,8 @@ import mdx from '@astrojs/mdx';
 export default defineConfig({
   base: '/US_Stock_Investing_Handbook/',
   outDir: 'dist',
+  build: {
+    assets: '_astro'
+  },
   integrations: [mdx()],
 });
