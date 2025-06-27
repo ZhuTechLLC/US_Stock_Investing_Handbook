@@ -3,6 +3,6 @@ import mdx from '@astrojs/mdx';
 
 export default defineConfig({
   base: '/US_Stock_Investing_Handbook/',
-  outDir: 'docs',
+  outDir: 'dist',
   integrations: [mdx()],
 });
